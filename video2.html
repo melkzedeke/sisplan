@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <title>Fullscreen Video</title>
+
+    <script type="text/javascript">
+
+        var vid;
+
+        function init() {
+
+            vid = document.getElementById("myVideo");
+
+            vid.addEventListener("loadedmetadata", addFullscreenButton, false);
+
+        }
+
+        function addFullscreenButton() {
+
+            if (vid.webkitSupportsFullscreen) {
+
+                var fs = document.getElementById("fs");
+
+                fs.style.visibility = "visible";
+
+            }
+
+        }
+
+        function goFullscreen() {
+
+            vid.webkitEnterFullscreen();
+
+        }
+
+    </script>
+
+</head>
+
+<body onload="init()">
+
+    <h1>Fullscreen Video</h1>
+
+    <video width="320" height="240" autoplay id="player">
+        
+         <source src="upload/ConvCentral.mp4" type="video/mp4" >
+    </video>
+
+   
+
+    <input type="button" id="fs" value="Fullscreen" onclick="goFullscreen()" >
+
+</body>
+
+</html>

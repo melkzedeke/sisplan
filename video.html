@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    
+    <head>
+        <script type="text/javascript">
+        function goFullscreen(id) {
+          var element = document.getElementById(id);       
+          if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+          } else if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen();
+          }  
+        }
+        </script>      
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <video width="320" height="240" autoplay id="player">
+         <source src="upload/ConvCentral.mp4" type="video/mp4" >
+       Your browser does not support the video tag.
+       </video>         
+        <button onclick="goFullscreen('player')">
+          View Fullscreen!
+        </button>        
+    </body>
+</html>
