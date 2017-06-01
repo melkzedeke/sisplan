@@ -167,7 +167,7 @@ include "funcoes.php";
                         $usuario = $usuario;
                        }
                     if (isset($_POST["senha"])){ 
-                       // echo "<br>senha=".$_POST["senha"]."<br>";                
+                       // echo "<br>senha=".$_POST["senha"]."<br>";      //test          
                         $senha = $_POST["senha"];
                         $senha   = $senha;
                     }

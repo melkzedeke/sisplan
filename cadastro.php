@@ -30,10 +30,15 @@ echo "cadastro";
                         </tr>
                         <tr>
                             <td>
-                             <input type="text" name="telefone" id="telefone" maxlength="15" />
+                             <input type="text" name="telefone" id="telefone" maxlength="15" size="15"/>
                             </td>
                         </tr>
-                        
+                        <tr>
+                        <td>Data Cadastro:</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="DataCadastro" value="" size="15" /></td>
+                        </tr>                        
                         <tr>
                             <td><input type="submit" value="Enviar" name="login" /></td>
                         </tr>                        

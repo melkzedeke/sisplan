@@ -20,14 +20,27 @@
                // printf("ID: %s  Name: %s", $row["id"], $row["nome"]);  
                 return $row;
             }
-             
+            mysql_free_result($result);         
+  
          }
-        mysql_free_result($result);         
-        mysql_close($conecta);         
+         if($opcao =="insert"){
+            $result = mysql_query($sql,$conecta);  
+            if (!$result) {
+                die('Invalid query: ' .mysql_error());
+            }
+            print "Executado com Sucesso!"; 
+         }
+    mysql_close($conecta); 
+       
     }
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+function converter_data($strData) {
+    $dataP = explode('/', $strData);
+    $dataNoFormatoParaOBranco = $dataP[2].'-'.$dataP[1].'-'.$dataP[0];
+    return $dataNoFormatoParaOBranco;
+}
+function reverte_data($strData) {           
+    $dataP = explode('-', $strData);
+    $dataParaExibir = $dataP[2].'/'.$dataP[1].'/'.$dataP[0];            
+    return $dataParaExibir;
+}
 ?>
