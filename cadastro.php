@@ -37,7 +37,7 @@ echo "cadastro";
                         <td>Data Cadastro:</td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="DataCadastro" value="" size="15" /></td>
+                            <td><input type="text" name="DataCadastro" id="DataCadastro" value="" size="15" /></td>
                         </tr>                        
                         <tr>
                             <td><input type="submit" value="Enviar" name="login" onclick="return validaform('')"  /></td>
@@ -51,7 +51,7 @@ echo "cadastro";
                 </form>
 
 <?php
-// ano-mês-dia
+// ano-mês-dia  required name=nome
 $data = '2017-02-10';
 
 $date = date_create($data);

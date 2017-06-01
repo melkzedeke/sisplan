@@ -7,14 +7,17 @@ function menu(idx) {
 
 function validaform(){
    var nome = document.getElementById('nome_cliente').value;
+   var datacadastro = document.getElementById('DataCadastro').value;
    
    if(nome==""){ 
-       alert('Preencha o campo com seu nome');
+       alert('Preencha o campo com o Nome do Cliente');
        document.getElementById('nome_cliente').focus();
        return false;
-   }else{
-       
-       
+   }else if(datacadastro==""){ 
+       alert('Preencha a Data do Cadastro');
+       document.getElementById('DataCadastro').focus();
+       return false;
+   }else{       
        document.formprincipal.submit();
    }
 }
