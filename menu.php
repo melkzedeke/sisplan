@@ -4,6 +4,20 @@ function menu(idx) {
         document.form1.action="index.php";
  	document.form1.submit();
 }
+
+function validaform(){
+   var nome = document.getElementById('nome_cliente').value;
+   
+   if(nome==""){ 
+       alert('Preencha o campo com seu nome');
+       document.getElementById('nome_cliente').focus();
+       return false;
+   }else{
+       
+       
+       document.formprincipal.submit();
+   }
+}
 </script>
 
 <a href="javascript: menu('principal')">principal</a>

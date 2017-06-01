@@ -16,7 +16,7 @@ echo "cadastro";
                             <td>Cliente Nome:</td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="cliente_nome" value="" size="50" /></td>
+                            <td><input type="text" name="cliente_nome" id="nome_cliente" value="" size="50" /></td>
                         </tr>
                         <tr>
                             <td>Endereco:<br></td>
@@ -40,7 +40,7 @@ echo "cadastro";
                             <td><input type="text" name="DataCadastro" value="" size="15" /></td>
                         </tr>                        
                         <tr>
-                            <td><input type="submit" value="Enviar" name="login" /></td>
+                            <td><input type="submit" value="Enviar" name="login" onclick="return validaform('')"  /></td>
                         </tr>                        
 
                     </tbody>
